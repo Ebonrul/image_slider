@@ -1,0 +1,80 @@
+/* styling for the body of the app */
+body{
+    margin: 0; /* zero margins mean the body covers the screen */
+    padding: 0; /* zero padding means the body content covers the body */
+    height: 100vh; /* a vertical height (vh) of 100 covers the 'current' screen */
+    display: flex; /* flex display keeps body content consistent */
+    justify-content: center; /* this centers body content */
+    align-items: center; /* this centers the individual items within the content of the body */
+    background: #0c5c3b;
+} /* this section positions the "body" of the app in the center and centers the pictures it displays */
+/* body styling end */
+
+.slider{
+    width: 800px; /* making the picture wide */
+    height: 500px; /* making the picture high */
+    border-radius: 10px; /* border radius rounds the corners of the display */
+    overflow: hidden; /* hides the 'extra' */
+} /* this section sets the slider or 'display' and covers the slides we don't want to see */
+
+.slides{
+    width: 500%; 
+    height: 500px;
+    display: flex;
+} 
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 1s;
+}
+
+.slide img{
+    width: 800px;
+    height: 500px;
+}
+
+/* css for manual slide navigation */
+
+.navigation-manual{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+     border: 2px solid #fff;
+     padding: 5px;
+     border-radius: 10px;
+     cursor: pointer;
+     transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background: #fff;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+#radio5:checked ~ .first{
+    margin-left: -80%;
+}
